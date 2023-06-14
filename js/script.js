@@ -17,9 +17,10 @@ inquirer
         name: "",
     },
     {
-        type: "",
-        message: "",
+        type: "license",
+        message: "choose your license",
         name: "",
+        choices: [license,'',''],
     },
     {
         type: "",
@@ -39,6 +40,7 @@ inquirer
 
 //add in the html code here if i want to use just JS
 //need to use the `${input}` from prompts inserted into the html^
+//html that is just a readme? can i use a readME.md or do I need to use the html format
 
 
 //my code ^^^

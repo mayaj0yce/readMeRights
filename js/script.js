@@ -2,9 +2,42 @@
 const fs = require('fs');
 
 // add to the end of a file
-fs.appendFile('readMe.md', `${process.argv[2]}\n`, (err) =>
-err ? console.error(err) : console.log('added')
-);
+// fs.appendFile('readMe.md', `${process.argv[2]}\n`, (err) =>
+// err ? console.error(err) : console.log('added')
+// );
+
+const inquirer = require('inquirer');
+
+//this is where the personal information is inserted
+inquirer
+.prompt([
+    {
+        type: "",
+        message: "",
+        name: "",
+    },
+    {
+        type: "",
+        message: "",
+        name: "",
+    },
+    {
+        type: "",
+        message: "",
+        name: "",
+    },
+    {
+        type: "",
+        message: "",
+        name: "",
+    },
+    
+])
+
+//add in the html code here if i want to use just JS
+//need to use the `${input}` from prompts inserted into the html^
+
+
 //my code ^^^
 
 // TODO: What are we importing?
@@ -28,11 +61,3 @@ console.log(`${process.argv[2]}\n`)
 // }
 // varAssign();
 // this comments the function outside of the process.argv console log
-
-
-// if (Apple === Pears){
-// true () 
-    
-// } else {
-//     false
-// }

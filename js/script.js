@@ -2,9 +2,9 @@
 const fs = require('fs');
 
 // add to the end of a file
-// fs.appendFile('readMe.md', `${process.argv[2]}\n`, (err) =>
-// err ? console.error(err) : console.log('added')
-// );
+fs.appendFile('readMe.md', `${process.argv[2]}\n`, (err) =>
+err ? console.error(err) : console.log('added')
+);
 
 const inquirer = require('inquirer');
 
@@ -33,6 +33,9 @@ inquirer
     },
     
 ])
+.then((response) =>
+   console.log('Success!', response.name)
+);
 
 //add in the html code here if i want to use just JS
 //need to use the `${input}` from prompts inserted into the html^

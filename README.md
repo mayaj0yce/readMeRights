@@ -9,7 +9,7 @@ spits out read me with
 - installation
 - usage
 - license
-    - list of options (below)
+    - list of options (below) using the prompt list function I will be adding in the licenses. This will be done using a variable 
     - link api for the licenses // no
 - contributing
 - tests

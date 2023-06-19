@@ -14,24 +14,62 @@
             <h1 class="display-4">Project: ${title}</h1>
             <div class="licensingDisplay">
                 <h3>License Choice</h3>
-            <link rel="badge" href="https://img.shields.io/badge/License-${license}-blue.svg rel=">
-            <link rel="license" href=" https://opensource.org/licenses/${license}">
-            <p class="lead">GitHub link ${GitHub User}.</p>
-            <!-- this needs to have a link into it ^ -->
+                <a href="https://img.shields.io/badge/License-${license}-blue.svg rel=">
+                    <a href=" https://opensource.org/licenses/${license}">
 
-        </div>
+            </div>
     </header>
-    <div class="container">
-        <h3>Questions? <span class="badge bg-secondary">Contact Me</span></h3>
-        <ul class="list-group">
-            <li class="list-group-item">My GitHub username is ${github}</li>
-            <li class="list-group-item">LinkedIn: ${linkedin}</li>
+    <div>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="description">Description</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#contributing">Contributing</a></li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <h2 id="description">Description</h2>
+        <!-- Content for thedescription section -->
+
+        <h2 id="installation">Installation</h2>
+        <!-- Content for the Installation section -->
+
+        <h2 id="usage">Usage</h2>
+        <!-- Content for the Usage section -->
+
+        <h2 id="examples">Examples</h2>
+        <!-- Content for the Examples section -->
+
+        <h2 id="contributing">Contributing</h2>
+        <!-- Content for the Contributing section -->
+
+        <h2 id="license">License</h2>
+        <!-- Content for the License section -->
+
+
+        <div class="container" id="contact">
+            <h3>Questions? <span class="badge bg-secondary">Contact Me</span></h3>
+            <ul class="list-group">
+                <li>
+                    <a href="https://github.com/${GitHubLink}">GitHub Profile</a>
+                </li>
+                <li>
+                    <a
+                        href="mailto:${Email}?subject=Question&body=I%20have%20a%20question%20regarding%20your%20project.">Send
+                        Email</a>
+                </li>
+
+            </ul>
+        </div>
     </div>
-
 </body>
-<footer>
-   <p> copyright @mayaj0yce 2023 </p>
-</footer>
-</html>
+<footer class="footer">
+    <div class="container text-center">
+      <span>copyright @mayaj0yce 2023</span>
+    </div>
+  </footer>
 
+</html>

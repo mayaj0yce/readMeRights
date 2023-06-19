@@ -88,7 +88,7 @@ inquirer
         },
         {
             type: "input",           
-            name: "GitHub User",
+            name: "GitHubLink",
             message: "Provide GitHub LINK",
         },
 

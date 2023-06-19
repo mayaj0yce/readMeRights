@@ -102,8 +102,11 @@ inquirer
     });
 
     const renderLicense = (license) => {
-        return [![License: ${license}](https:`//img.shields.io/badge/License-`${license}-blue.svg)](https:`//opensource.org/licenses/${license}`)
+        return [![license: ${license}]
+  
       },
+
+///fix that ^^^^^
 
 
 //add in the html code here if i want to use just JS

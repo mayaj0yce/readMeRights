@@ -10,31 +10,8 @@ fs.appendFile('readMe.md', `${process.argv[2]}\n`, (err) =>
 
 // const license = [ array of licenses that can be pulled from]
 //this is where the personal information is inserted
-const generateHTML = ({ name, location, github, linkedin }) =>
-  `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-// 
-<body>
-  <header class="p-5 mb-4 header bg-light">
-    <div class="container">
-      <h1 class="display-4">Hi! My name is ${name}</h1>
-      <p class="lead">I am from ${location}.</p>
-      <h3>Example heading <span class="badge bg-secondary">Contact Me</span></h3>
-
-      <ul class="list-group">
-        <li class="list-group-item">My GitHub username is ${github}</li>
-        <li class="list-group-item">LinkedIn: ${linkedin}</li>
-      </ul>
-    </div>
-  </header>
-</body>
-</html>`;
+const generateHTML = ({ title, description, installation, Usage,  test, contributing, license, email, GitHubLink}) =>
+  ` html here `;
 
 
 inquirer
@@ -50,12 +27,6 @@ inquirer
             message: "Please give a short description of your project",
         },
         {
-            // put this into HTML instead
-            type: "input",
-            name: "Table of contents",
-            message: "",
-        },
-        {
             type: "input",
             name: "instalation",
             message: "",
@@ -65,11 +36,12 @@ inquirer
             name: "Usage",
             message: "How can this be used",
         },
+        
+        
         {
-            type: "list",
-            name: "license",
-            message: "choose your license",
-            choices: [license,'',''],
+            type: "input",            
+            name: "Test",
+            message: "What Tests have been done?",
         },
         {
             type: "input",            
@@ -77,9 +49,10 @@ inquirer
             message: "",
         },
         {
-            type: "input",            
-            name: "Test",
-            message: "What Tests have been done?",
+            type: "list",
+            name: "license",
+            message: "choose your license",
+            choices: ['none','Apache License 2.0','MIT License','The Unlicensed'],
         },
         {
             type: "input",           

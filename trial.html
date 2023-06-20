@@ -13,46 +13,53 @@
         <div class="container">
             <h1 class="display-4">Project: ${title}</h1>
             <div class="licensingDisplay">
-                <h3>License Choice</h3>
-                <a href="https://img.shields.io/badge/License-${license}-blue.svg rel=">
-                    <a href=" https://opensource.org/licenses/${license}">
-
+                <a href="https://img.shields.io/badge/License-${license}-blue.svg rel="></a>
             </div>
     </header>
-    <div>
+    <section class="container">
+
         <h2>Table of Contents</h2>
         <ul>
             <li><a href="description">Description</a></li>
             <li><a href="#installation">Installation</a></li>
             <li><a href="#usage">Usage</a></li>
-            <li><a href="#examples">Examples</a></li>
+            <li><a href="#test">Test</a></li>
             <li><a href="#contributing">Contributing</a></li>
             <li><a href="#license">License</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+    </section>
+    <div>
+        <div class="container" id="description">
+            <h2> ${Description} </h2>
 
-        <h2 id="description">Description</h2>
-        <!-- Content for thedescription section -->
+        </div>
 
-        <h2 id="installation">Installation</h2>
-        <!-- Content for the Installation section -->
+        <div class="container" id="installation">
+            <h2> ${Installation}</h2>
 
-        <h2 id="usage">Usage</h2>
-        <!-- Content for the Usage section -->
+        </div>
 
-        <h2 id="examples">Examples</h2>
-        <!-- Content for the Examples section -->
+        <div class="container" id="usage">
+            <h2>Usage</h2>
+        </div>
 
-        <h2 id="contributing">Contributing</h2>
-        <!-- Content for the Contributing section -->
+        <div class="container" id="test">
+            <h2>Testing</h2>
+        </div>
 
-        <h2 id="license">License</h2>
-        <!-- Content for the License section -->
+        <div class="container" id="contributing">
+            <h2>Contributing</h2>
+        </div>
 
+        <div class="container" id="license">
+            <a href=" https://opensource.org/licenses/${license}"></a> <h2>License</h2>
+          
+        </div>
 
         <div class="container" id="contact">
-            <h3>Questions? <span class="badge bg-secondary">Contact Me</span></h3>
-            <ul class="list-group">
+            <h3>Questions? Contact Me</h3>
+            <ul class="list-unstyled">
                 <li>
                     <a href="https://github.com/${GitHubLink}">GitHub Profile</a>
                 </li>
@@ -68,8 +75,8 @@
 </body>
 <footer class="footer">
     <div class="container text-center">
-      <span>copyright @mayaj0yce 2023</span>
+        <span>copyright @mayaj0yce 2023</span>
     </div>
-  </footer>
+</footer>
 
 </html>

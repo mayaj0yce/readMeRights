@@ -19,30 +19,40 @@ function chooseLicense(license) {
     // Invalid license
     console.log("Invalid license. Please try again.");
   }
-}
-
-// Prompt the user for a license and call the function
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'license',
-      message: "Please enter your license (A, B, C):",
-    }
-  ])
-  .then(answers => {
-    const userChoice = answers.license;
-    chooseLicense(userChoice);
-  })
-  .catch(error => {
-    console.log("Error occurred:", error);
-  });
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  let licenseBadge = '';
+
+  // Generate license badge based on the license type
+  switch (license) {
+    case 'none':
+      // No license badge
+      break;
+    case 'Apache License 2.0':
+      licenseBadge = '[![License: Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+      break;
+    case 'MIT License':
+      licenseBadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      break;
+    case 'The Unlicensed':
+      licenseBadge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+      break;
+    default:
+      // Invalid or unrecognized license
+      break;
+  }
+
+  return licenseBadge;
+}
+
+const licenseBadge = renderLicenseBadge(license);
+
+console.log(licenseBadge); // Outputs the generated license badge
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string

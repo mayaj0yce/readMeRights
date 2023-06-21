@@ -11,22 +11,22 @@ inquirer
         {
             type: "input",
             name: "title",
-            message: "Title of your project",
+            message: "Title of your project:",
         },
         {
             type: "input",
             name: "Description",
-            message: "Please give a short description of your project",
+            message: "Please give a short description of your project:",
         },
         {
             type: "input",
             name: "instalation",
-            message: "",
+            message: "How does one install the application?",
         },
         {
             type: "input",
             name: "Usage",
-            message: "How can this be used",
+            message: "what can this application be used for?",
         },
         {
             type: "input",
@@ -41,13 +41,17 @@ inquirer
         {
             type: "list",
             name: "license",
-            message: "choose your license",
-            choices: ['none', 'Apache License 2.0', 'MIT License'],
+            message: "Select your license",
+            choices: [
+                'none',
+                'Apache License 2.0',
+                'MIT License',
+                'The Unlicensed'],
         },
         {
             type: "input",
             name: "Email",
-            message: "Enter a Valide Email for Contact information",
+            message: "Enter a Valid Email",
         },
         {
             type: "input",
@@ -56,6 +60,32 @@ inquirer
         },
 
     ])
+    .then(answers => {
+        const choice = answers.license;
+
+        // Perform actions based on the choice using switch case
+        switch (choice) {
+            case 'none':
+                // No license badge
+                break;
+            case 'Apache License 2.0':
+                licenseBadge = '[![License: Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+                break;
+            case 'MIT License':
+                licenseBadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+                break;
+            case 'The Unlicensed':
+                licenseBadge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+                break;
+            default:
+                // Invalid or unrecognized license
+                break;
+        }
+
+      // Perform additional actions after the switch case
+      return doSomethingElse();
+    })
+
     .then((answers) => {
         const htmlPageContent = generateHTML(answers);
 

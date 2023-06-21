@@ -40,7 +40,6 @@ const generateHTML = ({ title, description, installation, usage, test, contribut
                     <h2> ${description} </h2>
                 </div>
     
-                title, description, installation, Usage, test, contributing, license, email, GitHubLink
     
                 <div class="container" id="installation">
                     <h2> ${installation}</h2>
@@ -146,7 +145,7 @@ inquirer
     ])
 
 
- 
+
     // .then(answers => {
     //     const choice = answers.license;
 
@@ -173,23 +172,23 @@ inquirer
     //     //   return doSomethingElse();
     // })
     // .then(answers => {
-        // const title = answers.title;
-        // const description = answers.description;
-        // const instalation = answers.instalation;
-        // const usage = answers.usage;
-        // const test = answers.test;
-        // const contributing = answers.contributing;
-        // const license = answers.license;
-        // const email = answers.email;
-        // const GitHubLink = answers.GitHubLink;
+    // const title = answers.title;
+    // const description = answers.description;
+    // const instalation = answers.instalation;
+    // const usage = answers.usage;
+    // const test = answers.test;
+    // const contributing = answers.contributing;
+    // const license = answers.license;
+    // const email = answers.email;
+    // const GitHubLink = answers.GitHubLink;
 
-      
-//     }
-// )
-.then((answers) => {
-    const htmlPageContent = generateHTML(answers);
 
-    fs.writeFile('index.html', htmlPageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
-    );
-  });
+    //     }
+    // )
+    .then((answers) => {
+        const htmlPageContent = generateHTML(answers);
+
+        fs.writeFile('index.html', htmlPageContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created index.html!')
+        );
+    });

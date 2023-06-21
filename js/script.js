@@ -1,9 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-//gen html
-const generateHTML = ({ title, description, installation, Usage, test, contributing, license, email, GitHubLink }) =>
-    ` html here `;
+// //gen html
+// const generateHTML = ({ title, description, installation, Usage, test, contributing, license, email, GitHubLink }) =>
+//     ``;
 
 //questions
 inquirer
@@ -60,6 +60,109 @@ inquirer
         },
 
     ])
+
+
+    .then(answers => {
+        const title = answers.title;
+        const description = answers.description;
+        const instalation = answers.instalation;
+        const usage = answers.usage;
+        const test = answers.test;
+        const contributing = answers.contributing;
+        const license = answers.license;
+        const email = answers.email;
+        const GitHubLink = answers.GitHubLink;
+
+        // Generate HTML dynamically with the obtained answer choice
+        const generatedHtml = `
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+            <title>${title}</title>
+        </head>
+        
+        <body>
+            <header class="p-5 mb-4 header bg-light">
+                <div class="container">
+                    <h1 class="display-4">Project: ${title}</h1>
+                    <div class="licensingDisplay">
+                        <a href="https://img.shields.io/badge/License-${license}-blue.svg rel="></a>
+                    </div>
+            </header>
+            <div class="container">
+        
+                <h2>Table of Contents</h2>
+                <div>
+                    <ul>
+                        <li><a href="description">Description</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#usage">Usage</a></li>
+                        <li><a href="#test">Test</a></li>
+                        <li><a href="#contributing">Contributing</a></li>
+                        <li><a href="#license">License</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="container" id="description">
+                        <h2> ${description} </h2>
+                    </div>
+        
+                    title, description, installation, Usage, test, contributing, license, email, GitHubLink
+        
+                    <div class="container" id="installation">
+                        <h2> ${instalation}</h2>
+                    </div>
+        
+                    <div class="container" id="usage">
+                        <h2> ${usage}</h2>
+                    </div>
+        
+                    <div class="container" id="test">
+                        <h2> ${test}</h2>
+                    </div>
+        
+                    <div class="container" id="contributing">
+                        <h2> ${contributing}</h2>
+                    </div>
+        
+                    <div class="container" id="license">
+                        <a href=" https://opensource.org/licenses/${license}"></a>
+                        <h2> ${license}</h2>
+        
+                    </div>
+        
+                    <div class="container" id="contact">
+                        <h3>Questions? Contact Me</h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://github.com/${GitHubLink}">GitHub Profile</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="mailto:${email}?subject=Question&body=I%20have%20a%20question%20regarding%20your%20project.">Send
+                                    Email</a>
+                            </li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </body>
+        <footer class="footer">
+            <div class="container text-center">
+                <span>copyright @mayaj0yce 2023</span>
+            </div>
+        </footer>
+        
+        </html>
+    `;
+    }
+),
     .then(answers => {
         const choice = answers.license;
 
@@ -82,14 +185,19 @@ inquirer
                 break;
         }
 
-      // Perform additional actions after the switch case
-      return doSomethingElse();
+        //   // Perform additional actions after the switch case
+        //   return doSomethingElse();
     })
-
-    .then((answers) => {
-        const htmlPageContent = generateHTML(answers);
-
-        fs.writeFile('index.html', htmlPageContent, (err) =>
-            err ? console.log(err) : console.log('Successfully created index.html!')
-        );
+    // Save the HTML document to a file
+    const fs = require('fs');
+    fs.writeFile('user.html', html, 'utf8', err => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log('HTML document created successfully!');
+      }
     });
+  })
+  .catch(error => {
+    console.error(error);
+  });

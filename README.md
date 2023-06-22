@@ -1,6 +1,6 @@
 # readMe
 https://github.com/mayaj0yce/readMeRights.git
-
+https://mayaj0yce.github.io/readMeRights/
 
 This is a README generator. It will ask you questions based on your project and then generate a README based on your answers.
 This is the final look
@@ -84,7 +84,7 @@ Apache License 2.0 (apache-2.0)
 MIT License (mit)
 
 
-This is the project in action:[readmeVideo.zip](https://github.com/mayaj0yce/readMeRights/files/11829224/readmeVideo.zip)
+This is the project in action: [readmeVideo.zip](https://github.com/mayaj0yce/readMeRights/files/11829224/readmeVideo.zip)
 
 
 

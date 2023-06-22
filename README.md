@@ -1,4 +1,6 @@
-# readMeRights
+# readMe
+https://github.com/mayaj0yce/readMeRights.git
+
 
 This is a README generator. It will ask you questions based on your project and then generate a README based on your answers.
 This is the final look

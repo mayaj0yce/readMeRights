@@ -6,6 +6,7 @@ This is a README generator. It will ask you questions based on your project and 
 This is the final look
 
 ![Screenshot (42)](https://github.com/mayaj0yce/readMeRights/assets/129634010/ae859567-a047-4403-9dc5-015bf14dd222)
+
 ![Screenshot (43)](https://github.com/mayaj0yce/readMeRights/assets/129634010/339f692c-c130-47f6-bcfb-43ac0daaae9a)
 
 

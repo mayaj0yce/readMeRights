@@ -1,6 +1,66 @@
 # readMeRights
-creates a readMe for user
 
+This is a README generator. It will ask you questions based on your project and then generate a README based on your answers.
+This is the final look
+
+![Screenshot (42)](https://github.com/mayaj0yce/readMeRights/assets/129634010/ae859567-a047-4403-9dc5-015bf14dd222)
+![Screenshot (43)](https://github.com/mayaj0yce/readMeRights/assets/129634010/339f692c-c130-47f6-bcfb-43ac0daaae9a)
+
+
+using the Inquire function the following questions are asked and put into an HTML document already programed. 
+   {
+            type: "input",
+            name: "title",
+            message: "Title of your project:",
+        },
+        {
+            type: "input",
+            name: "description",
+            message: "Please give a short description of your project:",
+        },
+        {
+            type: "input",
+            name: "instalation",
+            message: "How does one install the application?",
+        },
+        {
+            type: "input",
+            name: "usage",
+            message: "what can this application be used for?",
+        },
+        {
+            type: "input",
+            name: "test",
+            message: "What Tests have been done?",
+        },
+        {
+            type: "input",
+            name: "contributing",
+            message: "How can people help contribute?",
+        },
+        {
+            type: "list",
+            name: "license",
+            message: "Select your license",
+            choices: [
+                'none',
+                'Apache License 2.0',
+                'MIT License',
+            ],
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Enter a Valid Email",
+        },
+        {
+            type: "input",
+            name: "gitHubLink",
+            message: "Provide GitHub LINK",
+        },
+
+This was my 'todo' list for the project. 
+Contains
 prompt for the imputed imformation 
 spits out read me with 
 - description
@@ -16,33 +76,14 @@ spits out read me with
 - questions
     - information and contact here as well
 
-
-project title becomes the read me title
-git hub username that is a link to the git hub page
-email added (and instructions to contact user)
-table of contents works
-
-license list = 
-{
+The following licenses are the ones I used. 
 none 
 Apache License 2.0 (apache-2.0)
 MIT License (mit)
-The Unlicense (unlicense)
-}
 
 
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
+This is the project in action:[readmeVideo.zip](https://github.com/mayaj0yce/readMeRights/files/11829224/readmeVideo.zip)
+
+
+
+

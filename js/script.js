@@ -33,7 +33,7 @@ const promptUserInputs = () => {
         {
             type: "input",
             name: "contributing",
-            message: "",
+            message: "How can people help contribute?",
         },
         {
             type: "list",
@@ -43,7 +43,7 @@ const promptUserInputs = () => {
                 'none',
                 'Apache License 2.0',
                 'MIT License',
-                'The Unlicensed'],
+            ],
         },
         {
             type: "input",
@@ -71,9 +71,6 @@ switch (license) {
   case 'MIT License':
     licenseBadgeLink = 'https://img.shields.io/badge/license-MIT-green.svg';
     break;
-  case 'The Unlicensed':
-    licenseBadgeLink = 'https://img.shields.io/badge/license-Unlicense-blue.svg';
-    break;
   default:
     // For 'none' or any other unknown license, no badge is displayed
     break;
@@ -87,9 +84,6 @@ switch (license) {
       break;
     case 'MIT License':
       licenseDescription = 'mit. It requires that the original copyright notice and license terms be included in the distributed software. They grant certain permissions to users, such as the right to use, copy, modify, and distribute the software.';
-      break;
-    case 'The Unlicensed':
-      licenseDescription = 'https://img.shields.io/badge/license-Unlicense-blue.svg';
       break;
       case 'none':
         licenseDescription = 'No License was chosen. Copyright Restrictions: Without a license, users have no permissions to use, modify, or distribute the software, and they must seek explicit permission from the copyright holder.'
@@ -112,8 +106,11 @@ const htmlContent =  `<!DOCTYPE html>
         <header class="p-5 mb-4 header bg-light">
             <div class="container">
             <h1 class="display-4">Project: ${title}</h1>
+        
             <div class="licensingDisplay">
-                ${licenseBadgeLink ? `<img src="${licenseBadgeLink}" alt="License Badge">` : ''}
+            <a href="${licenseBadgeLink}">
+            <img src="${licenseBadgeLink}" alt="License Badge">
+            </a>
             </div>
         </header>
         <div class="container">
